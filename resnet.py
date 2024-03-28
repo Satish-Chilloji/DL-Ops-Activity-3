@@ -25,7 +25,7 @@ resnet101.fc = nn.Linear(num_ftrs, 10)  # 10 classes in FashionMNIST
 
 # Define loss function and optimizer
 criterion = nn.CrossEntropyLoss()
-optimizer = optim.Adam(resnet101.parameters(), lr=0.001)
+optimizer = optim.RMSprop(resnet101.parameters(), lr=0.001)
 
 # Training loop
 epochs = 10
